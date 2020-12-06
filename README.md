@@ -1,7 +1,7 @@
 # Data Engineering Bootcamp (IGTI)
 
 ## Project 01 - enade
-The Enade - Exame Nacional de Desempenho dos Estudantes (National Student Performance Exam) evaluates the performance of graduates of university courses in relation to the syllabus foreseen in the curricular guidelines of the courses, the development of competences and skills necessary to deepen general and professional training, and the level of updating of students in relation to the Brazilian and world reality.
+The Enade - Exame Nacional de Desempenho dos Estudantes (National Student Performance Exam) evaluates the performance of graduates of university courses.
 
 In this project, there is the extraction of data from Enade 2019, which are available on the website [Microdados Inep](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enade) in zip format.
 
