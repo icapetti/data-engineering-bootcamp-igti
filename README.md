@@ -8,4 +8,4 @@ In this project, there is the extraction of data from Enade 2019, which are avai
 Understanding the data you are working with is an important part of data engineering. So, an analysis of the data is made, such as the **Descriptive Statistics** of the fields using **describe()**, **filters using loc[]**, **groupings with groupby**, **aggregations like mean()** and **replacement of values using replace()**.
 
 ## Project 02 - twitter
-Programming a Crawler for streaming tweets: Implements a Stream Listener for Twitter where a list of words to be monitored is informed. Each time there is a new tweet with one of the words this tweet is collected and saved in a json file.
+Programming a Crawler for streaming tweets: Implements a **Stream Listener for Twitter** where a list of words to be monitored is informed. Each time there is a new tweet with one of the words this tweet is collected and **saved in a json file**.
