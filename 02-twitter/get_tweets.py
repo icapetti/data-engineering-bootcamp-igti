@@ -1,8 +1,8 @@
 # Libraries
 import json
-from os import access
 from tweepy import OAuthHandler, Stream, StreamListener
 import configparser
+from datetime import datetime
 
 # Reads the credentials file and saves the tokens in variables
 config = configparser.ConfigParser()
@@ -13,3 +13,26 @@ access_key = config.get('twitter_access_tokens','api_key')
 access_secret_key = config.get('twitter_access_tokens','api_secret_key')
 
 # Defines a file to save the collected tweets
+# w = write
+today = datetime.now().strftime("%Y-%m%d %H:%M:%S")
+out = open(f"collected_tweets{today}.txt", "w")
+
+# Implements a class called MyListener() as inheritance from StremListener()
+# This class overwrites two methods of StreamListener
+class MyListener(StreamListener):
+    def on_data(self,data):
+        item_string = json.dumps(data)
+        out.write(item_string + "\n")
+        return True
+
+    def on_error(self,status):
+        print(status)
+
+# main
+if __name__ == "__main__":
+    l = MyListener()
+    auth = OAuthHandler(auth_key, auth_secret_key)
+    auth.set_access_token(access_key, access_secret_key)
+
+    stream = Stream(auth,l)
+    stream.filter(track=['Trump','Biden'])
